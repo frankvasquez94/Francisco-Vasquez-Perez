@@ -1,0 +1,12 @@
+server:
+  port: 90
+
+spring:
+  profiles:
+    active: local
+#Log configuration
+logging:
+  path: file-log/${spring.profiles.active}/lifemiles-instant-issuance-svc/
+  file: ${logging.path}${hostname}.log
+  
+

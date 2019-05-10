@@ -1,0 +1,36 @@
+
+crear una base de datos en postgres llamada lifebank
+correr el script sql que aparece en el directorio principal del proyecto.
+
+
+importar el proyecto en eclipse:
+
+1. Archivo > import > Maven > 
+Buscar el proyecto.
+
+Correr el proyecto:
+1. click derecho sobre el pryecto.
+2. Run As> Spring Boot App
+
+probar login
+
+abir un cliente para soap y configurarlo como post:
+url: http://localhost:90/life/bank/login
+
+Request:
+{
+    "username": "usuario",
+    "password": "contraseña"
+}
+
+
+Response:
+
+{
+   "tkn": "jjjbcjbjbvjcbvjbjvbjbvc"
+}
+
+
+
+
+

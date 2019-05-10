@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>  
+    
+    
+	<include resource="log/log-variables.xml" />	
+	<include resource="log/custom-logger-template.xml" />
+	
+	<!-- Default logging level -->
+	<root level="INFO">
+		<appender-ref ref="CONSOLE_LOGGER" />
+	</root>
+	
+	<root level="INFO" additivity="false">
+		<appender-ref ref="FILE_ASYNC_SVC_LOGGER" />
+	</root>
+</configuration>

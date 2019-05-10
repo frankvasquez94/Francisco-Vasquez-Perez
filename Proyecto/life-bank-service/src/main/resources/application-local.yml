@@ -1,0 +1,39 @@
+# Database
+spring:
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/lifebank
+    username: postgres
+    password: 'vp120042018#'
+    testWhileIdle: true
+    driver-class-name: org.postgresql.Driver
+    validationQuery: SELECT 1
+    hikari:
+      maximum-pool-size: 60
+      connection-timeout: 10000
+      idle-timeout: 20000
+      max-lifetime: 120000
+      minimum-idle: 5
+
+# JPA properties
+  jpa:
+    #database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: none           
+    database-platform: org.hibernate.dialect.PostgreSQLDialect    
+    properties.hibernate.jdbc.lob.non_contextual_creation : true
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+
+logging:
+  level:
+    ROOT: INFO
+    org:
+      springframework:
+        web: ERROR
+        hibernate: ERROR
+  size: 1GB
+  maxHistory: 30
+ 
