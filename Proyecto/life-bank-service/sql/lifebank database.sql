@@ -43,5 +43,16 @@ references lb_users(usr_id) on update cascade on delete restrict;
 alter table beneficiarios add constraint beneficiarios_bnf_id_tipo_cuenta_fk foreign key(bnf_id_tipo_cuenta)
 references tipo_cuenta(tcn_id) on update cascade on delete restrict;
 
+INSERT INTO lifebank_products.lb_users (usr_username, usr_password) 
+VALUES 
+('test2','test1'),
+('test2','test2'),
+('test3','test3'),
+('test4','test4'),
+('test5','test5');
+
+INSERT INTO lifebank_products.tipo_cuenta (tcn_nombre)
+values ('personal'),('tarjeta de credito'),('prestamo');
+
 
 commit;
