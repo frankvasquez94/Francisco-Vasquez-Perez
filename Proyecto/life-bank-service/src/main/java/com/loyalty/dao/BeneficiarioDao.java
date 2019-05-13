@@ -12,4 +12,7 @@ public interface BeneficiarioDao extends CrudRepository<Beneficiario, Integer>{
 	
 	@Query("Select b from Beneficiario b inner join fetch b.usuario u where b.numeroCuenta = :numeroCuenta and u.id = :idUsuario")
 	public Beneficiario getPorUsuario(@Param("numeroCuenta") String numeroCuenta,@Param("idUsuario") Integer idUsuario);
+	
+	@Query("Select b from Beneficiario b inner join fetch b.usuario u where b.id = :idBeneficiario and u.id = :idUsuario")
+	public Beneficiario getPorUsuarioYIdBeneficiario(@Param("idBeneficiario") Integer idBeneficiario,@Param("idUsuario") Integer idUsuario);
 }
